@@ -1,19 +1,16 @@
+## Function to perform sequential search on an integer array and find a number
+## If the number is found in the array, return the index of the number else return -1
+## @param arr, the array of integers
+## @param num, the number to be searched
+## @return index of the element found else -1
 def search(arr, num):
-    I = 0
-    false_condition = -1
+    i = 0
+    index = -1
 
-    while (I < len(arr)):
-        I += 1
-        if num == arr[I]:
-
-            false_condition = I
-            return I
-            
-        else:
+    while (i < len(arr)):
+        if num == arr[i]:
+            index = i
             break
-            return false_condition
-
-arr = [43, 34623, 253, 664, 4335]
-num = 664
-
-print(search(arr, num))
+        i += 1
+    
+    return index
