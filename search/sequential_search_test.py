@@ -24,5 +24,8 @@ class TestSequentialSearch(unittest.TestCase):
     def test_elementNotExists(self):
         self.assertEqual(search([5, 6, 2, 8, 9], 1), -1)
 
+    def test_elementExistsInMiddleChar(self):
+        self.assertEqual(search(['D', 'H', 'R', 'U', 'V'], 'U'), 3)
+
 if __name__ == "__main__":
     unittest.main()
