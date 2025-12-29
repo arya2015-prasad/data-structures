@@ -1,21 +1,27 @@
 import unittest
-from str_search import search
+from str_search import substr
 
 class TestStringSearch(unittest.TestCase):
-    def test_eib(self):
-        self.assertEqual(search(["U", "S", "A"], "U"), 0)
-    
-    def test_eie(self):
-        self.assertEqual(search(["U", "A", "E"], "E"), 2)
-    
-    def test_eim(self):
-        self.assertEqual(search(["U", "K", "R", "A", "I", "N", "E"], "A"), 3)
-    
-    def test_MTa(self):
-        self.assertEqual(search([], "D"), -1)
+    def test_emptyStringEmptySubstring(self):
+        self.assertEqual(substr("", ""), -1)
 
-    def test_ede(self):
-        self.assertEqual(search(["D", "H", "R", "U", "V"], "A"), -1)
+    def test_emptyStringNonEmptySubstring(self):
+        self.assertEqual(substr("", "hello"), -1)
+
+    def test_nonEmptyStringEmptySubstring(self):
+        self.assertEqual(substr("hello world", ""), -1)
+
+    def test_nonEmptyStringNonExistingSubstring(self):
+        self.assertEqual(substr("hello world", "worlk"), -1)
+
+    def test_nonEmptyStringExistingSubstring(self):
+        self.assertEqual(substr("hello world", "world"), 6)
+
+    def test_nonEmptyStringExistingSubstringWithMultipleMatchingFirstCharacter(self):
+        self.assertEqual(substr("hello world", "ld"), 9)
+
+    def test_nonEmptyStringExistingSubstringWithMultipleMatches(self):
+        self.assertEqual(substr("hello world! look its beautiful day", "lo"), 3)
 
 if __name__ == "__main__":
     unittest.main()
