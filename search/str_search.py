@@ -5,8 +5,12 @@
 ## @return index of the substring found else -1
 def substr(string, substring):
 
-    if string == "" or substring == "":
-        return -1
+    if substring == "":
+        return 0
+
+    if string == "" and substring == "":
+        return 0
+
 
     x = 0
     y = 0
@@ -27,6 +31,7 @@ def substr(string, substring):
                 x += 1
         
     if matchIndex > -1 :
-        return matchIndex -1
+        return matchIndex - 1
     else :
         return -1
+

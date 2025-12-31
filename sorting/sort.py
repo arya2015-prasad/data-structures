@@ -1,9 +1,11 @@
-#arr = []
-#q = int(input("Enter array length: "))
-#for x in range(q):
-#    num = float(input("Enter nums: "))
-#    arr.append(num)
-#    print(arr)
+'''
+arr = []
+q = int(input("Enter array length: "))
+for x in range(q):
+    num = float(input("Enter nums: "))
+    arr.append(num)
+    print(arr)
+'''
 
 def swap(arr, i, j):
     c = arr[i]

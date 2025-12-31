@@ -1,5 +1,7 @@
-from sequential_search import search
-
+from an_psuedo import s
+from psuedo import search
+from str_search import substr
+from str_search import substr
 baseString = []
 
 def menu():
@@ -12,28 +14,7 @@ while True:
   print()
   x = int(input("Enter your choice: "))
   match x:
-   case 2:
-    how_many = "Enter array's length: "
-    jk = input(how_many)
-    sx = int(jk) 
-    
-    for x in range(sx):
-     baseSt = "Enter chars: "
-     
-     que = input(baseSt)
-     
-     baseString.append(que)
-
-    searchString = "What number do you want to find in the array: "
-    qu = input(searchString)
-
-    print(search(baseString, searchString))
-
-while True:
-    baseString = "Enter a text: "
-    q = input(baseString)
-
-    searchString = "What do you want to find in the text: "
-    q = input(searchString)
-
-    print(search(baseString, searchString))
+   case 1:
+    baseString = input("Enter the string: ")
+    searchString = input("Enter the substring: ")
+    print(s(baseString, searchString))
