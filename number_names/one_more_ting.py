@@ -85,3 +85,38 @@ def xxx(x):
         return wf
 
 print(xxx('456'))
+
+def xooo(x):
+    if int(x[0]) > 0 and x[1] == "0" and x[2] == "0" and x[3] == "0":
+        wf = oox("00" + x[0]) + " thousand"
+        return wf
+
+print(xooo("5000"))
+
+def xoox(x):
+    if int(x[0]) > 0 and x[1] == "0" and x[2] == "0" and int(x[3]) > 0:
+        wf = xooo(x[0] + "000") + " " + oox("00" + x[3])
+        return wf
+
+print(xoox("5004"))
+
+def xoxo(x):
+    if int(x[0]) > 0 and x[1] == '0' and int(x[2]) > 0 and x[3] == '0':
+        wf = xooo(x[0] + "000") + " " + oxo('0' + x[2] + '0')
+        return wf
+
+print(xoxo("5060"))
+
+def xoxx(x):
+    if int(x[0]) > 0 and x[1] == '0' and int(x[2]) > 0 and int(x[3]) > 0:
+        wf = xooo(x[0] + "000") + " " + oxo('0' + x[2] + '0') + " " + oox("00" + x[3])
+        return wf
+
+print(xoxx("4026"))
+
+def xxoo(x):
+    if int(x[0]) > 0 and int(x[1]) > 0 and x[2] == '0' and x[3] == '0':
+        wf = xooo(x[0] + "000") + " " + xoo(x[1] + "00")
+        return wf
+
+print(xxoo("4500"))
